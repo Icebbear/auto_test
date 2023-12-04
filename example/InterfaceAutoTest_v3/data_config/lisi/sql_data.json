@@ -1,0 +1,18 @@
+{
+    "维度管理": {
+        "添加维度": {
+            "AddDemSuccess": "DELETE FROM uc_demension WHERE `CODE_`=\"dem_test57_abc\";"
+        },
+        "根据维度编码删除维度": {
+            "DeleteDemSuccess": "SELECT ID_ from uc_demension WHERE `CODE_`=\"dem_test57_abc\";"
+        }
+    },
+    "组织管理": {
+        "添加组织": {
+            "AddOrgSuccess": {
+                "select": "SELECT ID_ from uc_demension WHERE `CODE_`=\"dem_test57_abc\";",
+                "delete": "DELETE FROM uc_org WHERE `CODE_`=\"test_org_57\";"
+            }
+        }
+    }
+}

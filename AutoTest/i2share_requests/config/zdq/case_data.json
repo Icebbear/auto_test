@@ -1,0 +1,20 @@
+{
+    "登录":{
+        "登录系统":{
+            "LoginSuccess" : "csrfmiddlewaretoken=mKndg8Wo16DpenoxIab7XYgwEhaq7movphk0cH6yXwSgdkTWPctwsMa5jw9mQ7d8&adminpassword=nj%2FfRT5Kpa1QQs0UuYnGLpfvwXJNl3Hp6sPnzil6wW1sPbMogwTuQp8er97WgfXr&adminname=system_admin",
+            "LoginErrorUsernameIsNone" : "csrfmiddlewaretoken=mKndg8Wo16DpenoxIab7XYgwEhaq7movphk0cH6yXwSgdkTWPctwsMa5jw9mQ7d8&adminpassword=nj%2FfRT5Kpa1QQs0UuYnGLpfvwXJNl3Hp6sPnzil6wW1sPbMogwTuQp8er97WgfXr&adminname=",
+            "LoginErrorPwdIsNone" : "csrfmiddlewaretoken=mKndg8Wo16DpenoxIab7XYgwEhaq7movphk0cH6yXwSgdkTWPctwsMa5jw9mQ7d8&adminpassword=&adminname=system_admin",
+            "LoginErrorUsernamepwdIsNone" : "csrfmiddlewaretoken=mKndg8Wo16DpenoxIab7XYgwEhaq7movphk0cH6yXwSgdkTWPctwsMa5jw9mQ7d8&adminpassword=&adminname=",
+            "LoginErrorPwdIsError" : "csrfmiddlewaretoken=mKndg8Wo16DpenoxIab7XYgwEhaq7movphk0cH6yXwSgdkTWPctwsMa5jw9mQ7d8&adminpassword=xxnj%2FfRT5Kpa1QQs0UuYnGLpfvwXJNl3Hp6sPnzil6wW1sPbMogwTuQp8er97WgfXr&adminname=system_admin",
+            "LoginErrorUsernameIsError" : "csrfmiddlewaretoken=mKndg8Wo16DpenoxIab7XYgwEhaq7movphk0cH6yXwSgdkTWPctwsMa5jw9mQ7d8&adminpassword=nj%2FfRT5Kpa1QQs0UuYnGLpfvwXJNl3Hp6sPnzil6wW1sPbMogwTuQp8er97WgfXr&adminname=admin"
+        }
+    },
+    "用户管理": {
+        "添加用户": {
+
+        }
+        
+    }
+}
+
+

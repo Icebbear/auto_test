@@ -1,0 +1,9 @@
+{
+    "维度管理":{
+        "添加维度":{
+            "AddDemSuccess":["老黄1号店", "laohuang1hao", "老黄1号店的维度"],
+            "AddDemErrorDemNameIsNone": ["", "laohuang1hao", "老黄1号店的维度"],
+            "AddDemErrorDemCodeIsNone": ["老黄1号店", "", "老黄1号店的维度"]
+        }
+    }
+}

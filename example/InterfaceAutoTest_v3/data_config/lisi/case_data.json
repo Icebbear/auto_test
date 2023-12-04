@@ -1,0 +1,55 @@
+{
+    "认证接口":{
+        "登录系统":{
+            "LoginSuccess": {"password": "MTIzNDU2","username": "admin"},
+            "LoginErrorUsernameLong":{"password": "MTIzNDU2","username": "adminadminadminadminadminadmin"},
+            "LoginErrorUsernameShort":{"password": "MTIzNDU2","username": "a"},
+            "LoginErrorUsernameNone":{"password": "MTIzNDU2","username": ""},
+            "LoginErrorUsernameSpecial":{"password": "MTIzNDU2","username": "@#!@#!@"},
+            "LoginErrorPwdLong":{"password": "MTIzNDU2MTIzNDU2MTIzNDU2MTIzNDU2MTIzNDU2","username": "admin"},
+            "LoginErrorPwdShort":{"password": "m","username": "admin"},
+            "LoginErrorPwdNone":{"password": "","username": "admin"},
+            "LoginErrorPwdSpecial":{"password": "@#!@#!@","username": "admin"},
+            "LoginErrorPwdError":{"password": "MTIzNDU222","username": "admin"}
+        }
+    },
+    "维度管理": {
+        "添加维度": {
+            "AddDemSuccess": {
+                    "code": "dem_test57_abc",
+                    "description": "测试维度57",
+                    "isDefault": 0,
+                    "name": "测试57期的维度"
+                }
+        },
+        "根据维度编码获取维度信息": {
+            "GetDemMessageSuccess": {"code": "dem_test57_abc"}
+        },
+        "根据维度编码删除维度": {
+            "DeleteDemSuccess": {"ids": "不知道"}
+        }
+    },
+    "组织管理": {
+        "添加组织": {
+            "AddOrgSuccess": {
+                "code": "test_org_57",
+                "demId": "不知道",
+                "exceedLimitNum": 0,
+                "grade": "",
+                "limitNum": 0,
+                "name": "测试组织",
+                "nowNum": 0,
+                "orderNo": 0,
+                "parentId": "0"
+            }
+        },
+        "添加组织参数": {
+            "AddOrgParamsSuccess": {"query": {"orgCode": "test_org_57"}, "body": [{"alias":"sz","value":9000}]}
+        },
+        "删除组织": {
+            "DelOrgSuccess": "test_org_57"
+        }
+    }
+}
+
+

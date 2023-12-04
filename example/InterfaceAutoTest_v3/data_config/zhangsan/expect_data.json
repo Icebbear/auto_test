@@ -1,0 +1,41 @@
+{
+    "认证接口":{
+        "登录系统":{
+            "LoginSuccess": {"username": "超级管理","account": "admin", "loginStatus": true},
+            "LoginErrorUsernameLong":{"state": false, "message":"账号或密码错误"},
+            "LoginErrorUsernameShort":{"state": false, "message":"账号或密码错误"},
+            "LoginErrorUsernameNone":{"state": false, "message":"账号或密码错误"},
+            "LoginErrorUsernameSpecial":{"state": false, "message":"账号或密码错误"},
+            "LoginErrorPwdLong":{"state": false, "message":"账号或密码错误"},
+            "LoginErrorPwdShort":{"state": false, "message":"账号或密码错误"},
+            "LoginErrorPwdNone":{"state": false, "message":"账号或密码错误"},
+            "LoginErrorPwdSpecial":{"state": false, "message":"账号或密码错误"},
+            "LoginErrorPwdError":{"state": false, "message":"账号或密码错误"}
+        },
+        "刷新token": {
+            "RefreshSuccess": {"message": "刷新成功"}
+        }
+    },
+    "维度管理": {
+        "添加维度": {
+            "AddDemSuccess": {"state": true, "message": "添加维度成功！"}
+        },
+        "根据维度编码获取维度信息": {
+            "GetDemMessageSuccess": {"demCode": "dem_test57_abc", "name": "测试57期的维度"}
+        },
+        "根据维度编码删除维度": {
+            "DeleteDemSuccess": {"state": true, "message": "删除维度成功"}
+        }
+    },
+    "组织管理": {
+        "添加组织": {
+            "AddOrgSuccess": {"state": true, "message": "添加组织成功！"}
+        },
+        "添加组织参数": {
+            "AddOrgParamsSuccess": {"state":true,"message":"保存组织参数成功！"}
+        },
+        "删除组织": {
+            "DelOrgSuccess": {"state":true,"message":"删除组织成功！"}
+        }
+    }
+}
