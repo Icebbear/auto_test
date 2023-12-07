@@ -1,41 +1,22 @@
 {
-    "认证接口":{
+    "登录":{
         "登录系统":{
-            "LoginSuccess": {"username": "超级管理","account": "admin", "loginStatus": true},
-            "LoginErrorUsernameLong":{"state": false, "message":"账号或密码错误"},
-            "LoginErrorUsernameShort":{"state": false, "message":"账号或密码错误"},
-            "LoginErrorUsernameNone":{"state": false, "message":"账号或密码错误"},
-            "LoginErrorUsernameSpecial":{"state": false, "message":"账号或密码错误"},
-            "LoginErrorPwdLong":{"state": false, "message":"账号或密码错误"},
-            "LoginErrorPwdShort":{"state": false, "message":"账号或密码错误"},
-            "LoginErrorPwdNone":{"state": false, "message":"账号或密码错误"},
-            "LoginErrorPwdSpecial":{"state": false, "message":"账号或密码错误"},
-            "LoginErrorPwdError":{"state": false, "message":"账号或密码错误"}
-        },
-        "刷新token": {
-            "RefreshSuccess": {"message": "刷新成功"}
+            "LoginSuccess" : "ok",
+            "LoginErrorUsernameIsNone" : "用户名或密码错误",
+            "LoginErrorPwdIsNone" : "用户名或密码错误",
+            "LoginErrorUsernamepwdIsNone" : "用户名或密码错误",
+            "LoginErrorPwdIsError" : "用户名或密码错误",
+            "LoginErrorUsernameIsError" : "用户名或密码错误"
         }
     },
-    "维度管理": {
-        "添加维度": {
-            "AddDemSuccess": {"state": true, "message": "添加维度成功！"}
-        },
-        "根据维度编码获取维度信息": {
-            "GetDemMessageSuccess": {"demCode": "dem_test57_abc", "name": "测试57期的维度"}
-        },
-        "根据维度编码删除维度": {
-            "DeleteDemSuccess": {"state": true, "message": "删除维度成功"}
+    "用户管理": {
+        "添加用户": {
+            "AddUserSuccess" : "login_name=001&email=001%40qq.com&password1=0S6RPJEuDjyoZK8TuE1PeNu%2BTMPPLXgae3sT3a0n3clyly%2FGOTTMvTQDGjxbZ%2FWF&password2=0S6RPJEuDjyoZK8TuE1PeG7080mHV8MuNCY%2FliyO%2FAJyly%2FGOTTMvTQDGjxbZ%2FWF",
+            "AddUserErrorUsernameIsNone" : "login_name=&email=001%40qq.com&password1=0S6RPJEuDjyoZK8TuE1PeNu%2BTMPPLXgae3sT3a0n3clyly%2FGOTTMvTQDGjxbZ%2FWF&password2=0S6RPJEuDjyoZK8TuE1PeG7080mHV8MuNCY%2FliyO%2FAJyly%2FGOTTMvTQDGjxbZ%2FWF",
+            "AddUserErrorpwdIsNone" : "login_name=001&email=001%40qq.com&password1=&password2="
         }
-    },
-    "组织管理": {
-        "添加组织": {
-            "AddOrgSuccess": {"state": true, "message": "添加组织成功！"}
-        },
-        "添加组织参数": {
-            "AddOrgParamsSuccess": {"state":true,"message":"保存组织参数成功！"}
-        },
-        "删除组织": {
-            "DelOrgSuccess": {"state":true,"message":"删除组织成功！"}
-        }
+
     }
 }
+
+
