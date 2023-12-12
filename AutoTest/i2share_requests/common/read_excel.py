@@ -34,7 +34,9 @@ class ReadExcel:
 
     def __get_cell_value(self, column, row):
         value = self.ws[column + str(row)].value
-        return value
+        if value:
+            value1 = value.strip()
+            return value1
 
     def get_module_name(self, row):
         return self.__get_cell_value(MODULE, row)
@@ -95,18 +97,18 @@ class ReadExcel:
             level = self.get_level(row)
             case_method = self.get_case_method(row)
             case_url = self.get_case_url(row)
-            case_mini = self.get_case_mime(row)
+            case_mine = self.get_case_mime(row)
             case_data = self.get_case_data(row)
             case_expect = self.get_expect_data(row)
             sql_type = self.get_sql_type(row)
             sql_data = self.get_sql_sentence(row)
             update_key = self.get_sql_update_key(row)
             list_data.append(
-                [module_name, api_name, title, level, case_method, case_url, case_mini, case_data, case_expect, sql_type, sql_data, update_key]
+                [module_name, api_name, title, level, case_method, case_url, case_mine, case_data, case_expect, sql_type, sql_data, update_key]
             )
         else:
             return list_data
 
 
 if __name__ == '__main__':
-    print(ReadExcel("登录", "../config/zdq/APIAutoTest.xlsx", "../config/zdq/case_data.json", "../config/zdq/expect_data.json").get_data())
+    print(ReadExcel("用户管理", "../config/zdq/APIAutoTest.xlsx", "../config/zdq/case_data.json", "../config/zdq/expect_data.json").get_data())
