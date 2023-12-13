@@ -1,0 +1,9 @@
+{
+    "用户管理":{
+        "添加用户":{
+            "AddUserSuccess":["s001", "s001@qq.com", "123qwe-=", "123qwe-="],
+            "AddUserErrorUserNameIsNone": ["", "s001@qq.com", "123qwe-=", "123qwe-="],
+                "AddUserErrorEmailIsNone": ["s001", "", "123qwe-=", "123qwe-="]
+        }
+    }
+}

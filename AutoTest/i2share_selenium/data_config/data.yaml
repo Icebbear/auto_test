@@ -1,0 +1,16 @@
+loginPage:
+  username: CSS_SELECTOR, [type="text"]
+  password: c,[type="password"]
+  login: x,//*[text()="登录"]
+
+demPage:
+  user: x,//*[text()="用户中心"]
+  org: x,//*[text()="组织管理"]
+  dem: x,//*[text()="维度管理"]
+  add_dem: x,//*[text()="添加"]
+  dem_name: c,[placeholder="请输入名称"]
+  dem_code: c,[placeholder="请输入别名"]
+  quit: c,[class="el-input__icon el-icon-circle-close el-input__clear"]
+  save: x,//*[text()="保存"]
+  message: c,[class="el-message__content"]
+  dem_quit: x,//*[text()="取消"]
