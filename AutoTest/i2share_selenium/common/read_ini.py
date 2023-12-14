@@ -39,5 +39,5 @@ class ReadIni:
 
 if __name__ == '__main__':
     re = ReadIni()
-    print(re.get_test_path("test_case"))
+    print(re.get_file_path("yaml"))
     # print(re.ini_path)

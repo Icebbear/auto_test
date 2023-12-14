@@ -1,16 +1,15 @@
 loginPage:
-  username: CSS_SELECTOR, [type="text"]
-  password: c,[type="password"]
-  login: x,//*[text()="登录"]
+  username: XPATH, //*[@placeholder="登录名"]
+  password: css_selector,[type="password"]
+  login: XPATH,//*[text()="登录" and @type="button"]
 
-demPage:
-  user: x,//*[text()="用户中心"]
-  org: x,//*[text()="组织管理"]
-  dem: x,//*[text()="维度管理"]
-  add_dem: x,//*[text()="添加"]
-  dem_name: c,[placeholder="请输入名称"]
-  dem_code: c,[placeholder="请输入别名"]
-  quit: c,[class="el-input__icon el-icon-circle-close el-input__clear"]
-  save: x,//*[text()="保存"]
-  message: c,[class="el-message__content"]
-  dem_quit: x,//*[text()="取消"]
+systemAdminPage:
+  user_mg: x,//*[@id="main"]/aside/section/ul/li/ul/li[2]/a
+  adduser: id,add-user-btn
+  username: name,login_name
+  email: name,email
+  pwd1: name,password1
+  pwd2: name,password2
+  confirm: c,button button-primary
+  cancel: c,button button-primary button-plain cancel_btn
+  message: c,//*[@id="add-user-form"]/div/div/p
