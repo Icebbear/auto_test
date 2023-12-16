@@ -41,5 +41,18 @@ class DB:
         else:
             raise ValueError("请检查SQL语句是否正确")
 
+    def ex(self, sql):
+        self.cursor.execute(sql)
+        # sql_lower = sql.lower().strip()
+        # if sql_lower.startswith("source") and sql_lower.endswith(".sql"):
+        #     try:
+        #         self.cursor.execute(sql)
+        #     except:
+        #         raise ValueError("请检查SQL语句是否正确")
+        # else:
+        #     raise ValueError("请检查SQL语句是否正确")
+
+
 if __name__ == '__main__':
     db = DB()
+    db.ex("source /data/i2share/scripts/i2share_db_init_for_mysql5.sql")

@@ -67,5 +67,5 @@ class ReadExcel:
 
 
 if __name__ == '__main__':
-    re = ReadExcel()
-    print(re.get_data())
+    da = ReadExcel().get_data()
+    print(da[0])

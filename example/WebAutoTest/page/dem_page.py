@@ -38,23 +38,24 @@ class DemPage(LoginPage):
         self.click(self.yaml_data["demPage"]["save"])
 
         time.sleep(1)
-        text = self.presence(self.yaml_data["demPage"]["message"]).text
+        text = self.presence(self.yaml_data["demPage"]["message"])
+        print(text)
+        print(text.text)
 
-        if "成功" not in text:
-            self.click(self.yaml_data["demPage"]["dem_quit"])
+
+        # if "成功" not in text:
+        #     self.click(self.yaml_data["demPage"]["dem_quit"])
 
         # 解图
         # 图片名称
         img_name = str(dem_name) + "==" + str(dem_code) + ".png"
         self.driver.get_screenshot_as_file(os.path.join(self.read_ini.get_report_path("img"), img_name))
-
         return text
-
-
 
 
 if __name__ == '__main__':
     dem = DemPage("C")
     data = Faker(locale="zh_cn")
-    for i in range(3):
-        print(dem.add_dem(data.name(), "@#!#!#!#!#"))
+    # for i in range(3):
+    #     print(dem.add_dem(data.name(), "@#!#!#!#!#"))
+    dem.add_dem(data.name(), "d1f")

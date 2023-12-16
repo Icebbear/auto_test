@@ -8,8 +8,10 @@ systemAdminPage:
   adduser: id,add-user-btn
   username: name,login_name
   email: name,email
-  pwd1: name,password1
-  pwd2: name,password2
-  confirm: c,button button-primary
+  pwd1: x,//*[@id="add-user-form"]/div/div/div[1]/div/div[3]/div/input
+  pwd2: x,//*[@id="add-user-form"]/div/div/div[1]/div/div[4]/div/input
+  confirm: x,//*[@id="add-user-form"]/div/div/div[2]/button[1]
   cancel: c,button button-primary button-plain cancel_btn
   message: c,//*[@id="add-user-form"]/div/div/p
+  isexist: x,//*[@id="InputsTr"]/tr[1]/td[1]/div[1]/a
+  error: x,//*[@id="add-user-form"]/div/div/p

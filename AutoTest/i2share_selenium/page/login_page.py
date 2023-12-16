@@ -25,6 +25,8 @@ class LoginPage(Basic):
 
 
 if __name__ == '__main__':
-    login = LoginPage("C")
-    login.login(username="system_admin", password="Info2soft")
-    time.sleep(10)
+    # login = LoginPage("C")
+    # login.login(username="system_admin", password="Info2soft")
+    # time.sleep(10)
+    data = read_yaml(ReadIni().get_file_path("yaml"))
+    print(data["systemAdminPage"]["adduser"])
