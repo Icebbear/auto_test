@@ -2,7 +2,7 @@
 # ---------------------------------------------------------------------------
 # ProjectName:   AutoTest
 # FileName:      read_json.py
-# Author:       zdq
+# Author:       icebear
 # Datetime:     2023/12/4 10:51
 # Description:
 # 命名规范：文件名全小写+下划线，类名大驼峰，方法和变量小写+下划线连接，
@@ -17,5 +17,5 @@ def read_json(file_name):
 
 
 if __name__ == '__main__':
-    xx = read_json("../config/zdq/expect_data.json")
+    xx = read_json("../config/icebear/expect_data.json")
     print(xx)
