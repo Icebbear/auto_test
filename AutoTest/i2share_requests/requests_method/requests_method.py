@@ -14,31 +14,57 @@ from common.read_ini import ReadIni
 from config.settings import *
 
 
-# class RequestsMethod:
-#     def __init__(self):
-#         login_url = ReadIni().get_host(SERVER_HOST) + "/"
-#
-#     def request_all(self):
-#         pass
+class RequestsMethod:
+    def __init__(self):
+        """
+        获取管理员的登录session，并更新值headers中
+        """
+        host = "http://114.67.239.168"
+        login_url = "http://114.67.239.168/ajax/tfa_login/verify/"
+        login_data = "username=system_admin&password=YxEz%2BU0hfRocO1%2FuQuNgeKocqqupJAMYwgg0iZws7L3rPpGmW4YoOjIiMjF6DM%2Bu"
+        self.i2share_session = requests.sessions.Session()
+        result = self.i2share_session.get(url=host)
+        x_csrftoken = re.findall(r"value=\'(.+)\'", result.text)
+        cookie = result.headers.get("Set-Cookie")
+        csrftoken = re.findall(r"csrftoken=\w+", cookie)
+        sessionid = re.findall(r"sessionid=\w+", cookie)
+        co = csrftoken[0] + "; " + sessionid[0] + ";"
+        self.i2share_session.headers.update({"X-CSRFToken": x_csrftoken[0],
+                                        "cookie": co,
+                                        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})
+        login_result = self.i2share_session.post(url=login_url, data=login_data)
+
+        adminlogin_url = "http://114.67.239.168/accounts/adminlogin/"
+        adminlogin_data = "csrfmiddlewaretoken=" + x_csrftoken[
+            0] + "&" + "adminpassword=BqNkb2IONZxZPvUcl%2FUTnv1qiVBzmvUX%2FSz59imAv2f8ZZ3ZYGUq538jFZMNo8U%2F&adminname=system_admin"
+        if "ok" in login_result.text:
+            # self.i2share_session.headers.pop("X-CSRFToken")
+            self.i2share_session.headers.update({"Upgrade-Insecure-Requests": "1", "X-Requested-With": "XMLHttpRequest"})
+            adminlogin_result = self.i2share_session.post(url=adminlogin_url, data=adminlogin_data, allow_redirects=False)
+            new_sessionid = re.findall(r"sessionid=\w+", adminlogin_result.headers.get("Set-Cookie"))
+            new_cookie = csrftoken[0] + "; " + new_sessionid[0] + ";"
+            self.i2share_session.headers.update({"Cookie": new_cookie})
+
+    def request_all(self, req_method, req_url, req_mime=None, case_data=None):
+        if req_mime == "x-www-form-urlencoded" or req_mime == "application/x-www-form-urlencoded":
+            return self.i2share_session.request(method=req_method, url=req_url, data=case_data)
+        elif req_mime == "json" or req_mime == "application/json":
+            return self.i2share_session.request(method=req_method, url=req_url, json=case_data)
+        elif req_mime == "form-data" or req_mime == "multipart/form-data":
+            return self.i2share_session.request(method=req_method, url=req_url, files=case_data)
+        elif req_mime == "query" or req_mime == "params" or req_mime == "param":
+            return self.i2share_session.request(method=req_method, url=req_url, params=case_data)
+        elif req_mime is None:
+            return self.i2share_session.request(method=req_method, url=req_url)
+        elif req_mime == "query|body" or req_mime == "body|query" or req_mime =="json|query" or req_mime == "query|json":
+            return self.i2share_session.request(method=req_method, url=req_url, params=case_data["query"], json=case_data["body"])
 
 
-# def login():
-#     host = "http://114.67.239.168/accounts/login/?next=/"
-#     login_url = "http://114.67.239.168/ajax/tfa_login/verify/"
-#     login_data = "csrfmiddlewaretoken=mKndg8Wo16DpenoxIab7XYgwEhaq7movphk0cH6yXwSgdkTWPctwsMa5jw9mQ7d8&adminpassword=nj%2FfRT5Kpa1QQs0UuYnGLpfvwXJNl3Hp6sPnzil6wW1sPbMogwTuQp8er97WgfXr&adminname=system_admin"
-#     #bpm_session = requests.sessions.Session()
-#
-#     # bpm_session.headers.update(
-#     #     {"Authorization": "Bearer " + bpm_session.post(url=login_url, json=login_data).json().get("token")})
-#
-#     # re = i2share_session.request(url=host, method="get")
-#     # i2share_csrftoken = requests.request(url=host, method="get").text
-#     # print(i2share_csrftoken)
-#
-#     i2share_session = requests.sessions.Session()
-#     result = i2share_session.get(url=host).text
-#     token = re.findall(r"value=\'(.+)\'", result)
-#
-#     print(token[0])
-#
-# login()
+if __name__ == '__main__':
+    i2 = RequestsMethod()
+    dep_url = "http://114.67.239.168/ajax/tfa_login/verify/"
+    data = "username=system_admin&password=YxEz%2BU0hfRocO1%2FuQuNgeKocqqupJAMYwgg0iZws7L3rPpGmW4YoOjIiMjF6DM%2Bu"
+    re = i2.request_all(req_url=dep_url, req_method="post", req_mime="x-www-form-urlencoded",case_data=data)
+    print(re.text)
+
+

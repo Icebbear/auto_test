@@ -11,9 +11,9 @@
     },
     "用户管理": {
         "添加用户": {
-            "AddUserSuccess" : "login_name=001&email=001%40qq.com&password1=0S6RPJEuDjyoZK8TuE1PeNu%2BTMPPLXgae3sT3a0n3clyly%2FGOTTMvTQDGjxbZ%2FWF&password2=0S6RPJEuDjyoZK8TuE1PeG7080mHV8MuNCY%2FliyO%2FAJyly%2FGOTTMvTQDGjxbZ%2FWF",
-            "AddUserErrorUsernameIsNone" : "login_name=&email=001%40qq.com&password1=0S6RPJEuDjyoZK8TuE1PeNu%2BTMPPLXgae3sT3a0n3clyly%2FGOTTMvTQDGjxbZ%2FWF&password2=0S6RPJEuDjyoZK8TuE1PeG7080mHV8MuNCY%2FliyO%2FAJyly%2FGOTTMvTQDGjxbZ%2FWF",
-            "AddUserErrorpwdIsNone" : "login_name=001&email=001%40qq.com&password1=&password2="
+            "AddUserSuccess" : "success",
+            "AddUserErrorUsernameIsNone" : "",
+            "AddUserErrorpwdIsNone" : ""
         }
 
     }
