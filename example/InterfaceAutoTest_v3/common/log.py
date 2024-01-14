@@ -2,7 +2,7 @@
 # ---------------------------------------------------------------------------
 # ProjectName:   test_57
 # FileName:      log.py
-# Author:       xxxxxxx
+# Author:       ice bear
 # Datetime:     2023/11/3 14:02
 # Description:
 # 

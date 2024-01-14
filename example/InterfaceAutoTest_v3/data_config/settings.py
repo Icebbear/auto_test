@@ -2,7 +2,7 @@
 # ---------------------------------------------------------------------------
 # ProjectName:   test_57
 # FileName:      settings.py
-# Author:       xxxxxxx
+# Author:       ice bear
 # Datetime:     2023/11/3 17:03
 # Description:
 # 

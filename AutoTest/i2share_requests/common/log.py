@@ -2,7 +2,7 @@
 # ---------------------------------------------------------------------------
 # ProjectName:   AutoTest
 # FileName:      log.py
-# Author:       icebear
+# Author:       ice bear
 # Datetime:     2023/12/4 10:51
 # Description:
 # 命名规范：文件名全小写+下划线，类名大驼峰，方法和变量小写+下划线连接，
@@ -13,7 +13,7 @@ import os.path
 
 
 def write_log():
-    logger = logging.getLogger(name="icebear")
+    logger = logging.getLogger(name="ice bear")
     logger.level = logging.NOTSET
 
     log_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "report/log/access.log")

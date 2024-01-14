@@ -2,7 +2,7 @@
 # ---------------------------------------------------------------------------
 # ProjectName:   i2share_requests
 # FileName:      test_admin.py
-# Author:       zdq
+# Author:       ice bear
 # Datetime:     2023/12/12 16:07
 # Description:
 # 命名规范：文件名全小写+下划线，类名大驼峰，方法和变量小写+下划线连接，
@@ -19,9 +19,9 @@ class TestAdmin:
         "module_name, api_name, title, level, case_method, case_url, case_mine, case_data, case_expect, sql_type, "
         "sql_data, update_key",
         ReadExcel(table_name="用户管理",
-                  excel_name="zdq/APIAutoTest.xlsx",
-                  case_data_name="zdq/case_data.json",
-                  expect_data_name="zdq/expect_data.json"
+                  excel_name="ice bear/APIAutoTest.xlsx",
+                  case_data_name="ice bear/case_data.json",
+                  expect_data_name="ice bear/expect_data.json"
                   ).get_data())
     def test_admin(self, req_fix, module_name, api_name, title, level, case_method, case_url, case_mine, case_data,
               case_expect, sql_type, sql_data, update_key):

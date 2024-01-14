@@ -1,8 +1,8 @@
 # -*-coding:utf-8 -*- #
 # ---------------------------------------------------------------------------
 # ProjectName:   i2share_requests
-# FileName:      icebear_formatter.py
-# Author:       icebear
+# FileName:      ice bear_formatter.py
+# Author:       ice bear
 # Datetime:     2024/1/11 23:13
 # Description:
 # 命名规范：文件名全小写+下划线，类名大驼峰，方法和变量小写+下划线连接，
@@ -34,17 +34,17 @@ def replace(file_path, old_str, new_str):
     :param new_str: 新的字符串
     :return: None
     """
-    with open(file=file_path, mode='r', encoding='utf-8') as f:
+    with open(file=file_path, mode='r', encoding='utf8') as f:
         content = f.read()
 
     content = content.replace(old_str, new_str)
-    with open(file=file_path, mode='w', encoding='utf-8') as f:
+    with open(file=file_path, mode='w', encoding='utf8') as f:
         f.write(content)
 
 
 if __name__ == '__main__':
     # 获取当前py文件的路径，由此再获取auto_test目录的全路径
-    format_path = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+    format_path =os.path.dirname(__file__)
     # 循环从生成器中取出py文件的全路径，对这个文件进行字符串替换操作
     for path in get_file_paths(format_path):
-        replace(path, "icebear", "iceicebear")
+        replace(path, "ice bear", "ice bear")

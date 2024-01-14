@@ -2,7 +2,7 @@
 # ---------------------------------------------------------------------------
 # ProjectName:   AutoTest
 # FileName:      read_excel.py
-# Author:       icebear
+# Author:       ice bear
 # Datetime:     2023/12/4 10:51
 # Description:
 # 命名规范：文件名全小写+下划线，类名大驼峰，方法和变量小写+下划线连接，
@@ -112,7 +112,7 @@ class ReadExcel:
 
 if __name__ == '__main__':
 <<<<<<< HEAD
-    print(ReadExcel("登录", "../config/icebear/APIAutoTest.xlsx", "../config/icebear/case_data.json", "../config/icebear/expect_data.json").get_data())
+    print(ReadExcel("登录", "../config/ice bear/APIAutoTest.xlsx", "../config/ice bear/case_data.json", "../config/ice bear/expect_data.json").get_data())
 =======
-    print(ReadExcel("用户管理", "../config/zdq/APIAutoTest.xlsx", "../config/zdq/case_data.json", "../config/zdq/expect_data.json").get_data())
+    print(ReadExcel("用户管理", "../config/ice bear/APIAutoTest.xlsx", "../config/ice bear/case_data.json", "../config/ice bear/expect_data.json").get_data())
 >>>>>>> 422db783746e00fc434053567ccc08e8f924ffce

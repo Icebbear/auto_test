@@ -2,7 +2,7 @@
 # ---------------------------------------------------------------------------
 # ProjectName:   i2share_selenium
 # FileName:      basic.py
-# Author:       zdq
+# Author:       ice bear
 # Datetime:     2023/12/13 19:55
 # Description:
 # 命名规范：文件名全小写+下划线，类名大驼峰，方法和变量小写+下划线连接，

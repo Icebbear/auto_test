@@ -2,7 +2,7 @@
 # ---------------------------------------------------------------------------
 # ProjectName:   i2share_selenium
 # FileName:      login_page.py
-# Author:       zdq
+# Author:       ice bear
 # Datetime:     2023/12/14 10:29
 # Description:
 # 命名规范：文件名全小写+下划线，类名大驼峰，方法和变量小写+下划线连接，

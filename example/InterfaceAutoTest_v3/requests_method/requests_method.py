@@ -2,7 +2,7 @@
 # ---------------------------------------------------------------------------
 # ProjectName:   test_57
 # FileName:      requests_method.py
-# Author:       xxxxxxx
+# Author:       ice bear
 # Datetime:     2023/11/3 15:24
 # Description:
 # 
